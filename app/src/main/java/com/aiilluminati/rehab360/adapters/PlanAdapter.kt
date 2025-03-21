@@ -13,11 +13,18 @@ import com.aiilluminati.rehab360.R
 import com.aiilluminati.rehab360.data.plan.Plan
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.CHEST_PRESS_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.DEAD_LIFT_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.EXTERNAL_ROTATION_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.INTERNAL_ROTATION_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.LUNGES_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.PENDULUM_SWINGS_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.PUSHUPS_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SCAPULAR_RETRACTION_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SHOULDER_FLEXION_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SHOULDER_PRESS_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SITUP_UP_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SLEEPER_STRETCH_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SQUATS_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.WALL_ANGELS_CLASS
 import com.aiilluminati.rehab360.util.MyUtils.Companion.databaseNameToClassification
 import java.util.Collections
 
@@ -91,7 +98,14 @@ class PlanAdapter internal constructor(context: Context) :
         PUSHUPS_CLASS to R.drawable.push_up,
         CHEST_PRESS_CLASS to R.drawable.chest_press,
         DEAD_LIFT_CLASS to R.drawable.dead_lift,
-        SHOULDER_PRESS_CLASS to R.drawable.shoulder_press
+        SHOULDER_PRESS_CLASS to R.drawable.shoulder_press,
+        PENDULUM_SWINGS_CLASS to R.drawable.pendulum_swings,
+        WALL_ANGELS_CLASS to R.drawable.wall_angels,
+        EXTERNAL_ROTATION_CLASS to R.drawable.external_rotation,
+        SCAPULAR_RETRACTION_CLASS to R.drawable.scapular_retraction,
+        SLEEPER_STRETCH_CLASS to R.drawable.sleeper_stretch,
+        SHOULDER_FLEXION_CLASS to R.drawable.shoulder_flexion,
+        INTERNAL_ROTATION_CLASS to R.drawable.internal_rotation,
     )
 
     private fun getDrawableResourceIdExercise(exerciseKey: String): Int {

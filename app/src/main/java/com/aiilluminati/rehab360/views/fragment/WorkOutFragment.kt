@@ -47,12 +47,19 @@ import com.aiilluminati.rehab360.data.results.WorkoutResult
 import com.aiilluminati.rehab360.posedetector.PoseDetectorProcessor
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.CHEST_PRESS_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.DEAD_LIFT_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.EXTERNAL_ROTATION_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.INTERNAL_ROTATION_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.LUNGES_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.PENDULUM_SWINGS_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.POSE_CLASSES
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.PUSHUPS_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SCAPULAR_RETRACTION_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SHOULDER_FLEXION_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SHOULDER_PRESS_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SITUP_UP_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SLEEPER_STRETCH_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.SQUATS_CLASS
+import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.WALL_ANGELS_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.WARRIOR_CLASS
 import com.aiilluminati.rehab360.posedetector.classification.PoseClassifierProcessor.YOGA_TREE_CLASS
 import com.aiilluminati.rehab360.util.MemoryManagement
@@ -109,7 +116,15 @@ class WorkOutFragment : Fragment(), MemoryManagement {
             SITUP_UP_CLASS,
             CHEST_PRESS_CLASS,
             DEAD_LIFT_CLASS,
-            SHOULDER_PRESS_CLASS
+            SHOULDER_PRESS_CLASS,
+            PENDULUM_SWINGS_CLASS,
+            WALL_ANGELS_CLASS,
+            EXTERNAL_ROTATION_CLASS,
+            SCAPULAR_RETRACTION_CLASS,
+            SLEEPER_STRETCH_CLASS,
+            SHOULDER_FLEXION_CLASS,
+            INTERNAL_ROTATION_CLASS,
+
         )
     private val onlyPose: List<String> = listOf(WARRIOR_CLASS, YOGA_TREE_CLASS)
     private var notCompletedExercise: List<Plan>? = null
@@ -204,7 +219,7 @@ class WorkOutFragment : Fragment(), MemoryManagement {
             // Add the FLAG_KEEP_SCREEN_ON flag to the activity's window, keeping the screen on
             activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
             cameraFlipFAB.visibility = View.GONE
-            gifContainer.visibility = View.VISIBLE
+            gifContainer.visibility = View.GONE
             buttonCancelExercise.visibility = View.VISIBLE
             buttonCompleteExercise.visibility = View.VISIBLE
             startButton.visibility = View.GONE

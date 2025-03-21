@@ -70,10 +70,18 @@ public class PoseClassifierProcessor {
     public static final String CHEST_PRESS_CLASS = "chestpress_down";
     public static final String DEAD_LIFT_CLASS = "deadlift_down";
     public static final String SHOULDER_PRESS_CLASS = "shoulderpress_down";
+    public static final String PENDULUM_SWINGS_CLASS = "pendulum_swings";
+    public static final String WALL_ANGELS_CLASS = "wall_angels";
+    public static final String EXTERNAL_ROTATION_CLASS = "external_rotation";
+    public static final String SCAPULAR_RETRACTION_CLASS = "scapular_retraction";
+    public static final String SLEEPER_STRETCH_CLASS = "sleeper_stretch";
+    public static final String SHOULDER_FLEXION_CLASS = "shoulder_flexion";
+    public static final String INTERNAL_ROTATION_CLASS = "internal_rotation";
     public static final String WARRIOR_CLASS = "warrior";
     public static final String YOGA_TREE_CLASS = "tree_pose";
     public static final String[] POSE_CLASSES = {
-            PUSHUPS_CLASS, SQUATS_CLASS, LUNGES_CLASS, SITUP_UP_CLASS, CHEST_PRESS_CLASS, DEAD_LIFT_CLASS, SHOULDER_PRESS_CLASS, WARRIOR_CLASS, YOGA_TREE_CLASS
+            PUSHUPS_CLASS, SQUATS_CLASS, LUNGES_CLASS, SITUP_UP_CLASS, CHEST_PRESS_CLASS, DEAD_LIFT_CLASS, SHOULDER_PRESS_CLASS,
+            PENDULUM_SWINGS_CLASS, WALL_ANGELS_CLASS, EXTERNAL_ROTATION_CLASS, SCAPULAR_RETRACTION_CLASS, SLEEPER_STRETCH_CLASS, SHOULDER_FLEXION_CLASS, INTERNAL_ROTATION_CLASS, WARRIOR_CLASS, YOGA_TREE_CLASS
     };
 
     private final boolean isStreamMode;
@@ -160,6 +168,22 @@ public class PoseClassifierProcessor {
                         addUniqueFile(files, uniqueFileNames, LUNGE_FILE);
                     }
                     case "Push up" -> addUniqueFile(files, uniqueFileNames, PUSH_UP_FILE);
+
+                    case "Pendulum Swings" ->
+                            addUniqueFile(files, uniqueFileNames, SHOULDER_PRESS_FILE);
+                    case "Wall Angels" ->
+                            addUniqueFile(files, uniqueFileNames, SHOULDER_PRESS_FILE);
+                    case "External Rotation" ->
+                            addUniqueFile(files, uniqueFileNames, SHOULDER_PRESS_FILE);
+                    case "Scapular Retraction" ->
+                            addUniqueFile(files, uniqueFileNames, SHOULDER_PRESS_FILE);
+                    case "Sleeper Stretch" ->
+                            addUniqueFile(files, uniqueFileNames, SHOULDER_PRESS_FILE);
+                    case "Shoulder Flexion" ->
+                            addUniqueFile(files, uniqueFileNames, SHOULDER_PRESS_FILE);
+                    case "Internal Rotation" ->
+                            addUniqueFile(files, uniqueFileNames, SHOULDER_PRESS_FILE);
+
                     case "Sit up" -> addUniqueFile(files, uniqueFileNames, SIT_UP_FILE);
                     case "Lunge" -> {
                         addUniqueFile(files, uniqueFileNames, LUNGE_FILE);

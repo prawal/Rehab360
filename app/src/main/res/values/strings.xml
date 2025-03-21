@@ -2,23 +2,25 @@
 <resources>
     <!-- Strings for splashscreen and onboarding -->
     <string name="next_button_text">Next</string>
-    <string name="elevate_your_workout_experience">Elevate Your Workout with AI-Powered Precision</string>
-    <string name="empower_your_fitness_journey">Empower Your Fitness Journey with Smart AI Assistance</string>
+    <string name="elevate_your_workout_experience">Enhance Your Rehab with AI-Powered Precision</string>
+    <string name="empower_your_fitness_journey">Empower Your Recovery Journey with Smart AI Assistance</string>
 
-    <string name="counting_made_easier">AI-Powered Rep Counting Made Easy</string>
-    <string name="hassle_free_repetition_tracking">Smart AI for Effortless Rep Tracking</string>
+    <string name="counting_made_easier">AI-Powered Movement Counting Made Easy</string>
+    <string name="hassle_free_repetition_tracking">Smart AI for Effortless Rehab Exercise Tracking</string>
 
-    <string name="kick_start">Kickstart your AI-powered fitness journey today.</string>
-    <string name="create_a_workout">Create a smart AI workout plan tailored for you.</string>
+
+    <string name="kick_start">Kickstart your AI-powered rehab journey today.</string>
+    <string name="create_a_workout">Create a smart AI rehab plan tailored for you.</string>
+
     <string name="next_onboarding">Next</string>
     <string name="get_started">Get Started</string>
 
     <!-- Strings for home-screen -->
     <string name="mixed_text">20 <font fgcolor="#A9A9A9">x 3</font></string>
-    <string name="there_is_no_plan_set_at_the_moment">There is no plan set at the moment</string>
-    <string name="exercise_left">%d exercise left</string>
+    <string name="there_is_no_plan_set_at_the_moment">There is no rehab plan set at the moment</string>
+    <string name="exercise_left">%d rehab exercise left</string>
 
-    <string name="app_name" translatable="false">AITrainer</string>
+    <string name="app_name" translatable="false">Rehab360</string>
 
     <string name="java_entry_title" translatable="false">Run the ML Kit quickstart written in Java</string>
     <string name="kotlin_entry_title" translatable="false">Run the ML Kit quickstart written in Kotlin</string>
@@ -138,7 +140,7 @@
     <string name="exercise_count">%1$s: %2$d</string>
     <string name="hello">Hello! 🔥</string>
     <string name="name">John</string>
-    <string name="workout_progress">Workout Progress</string>
+    <string name="workout_progress">Exercise Progress</string>
     <string name="exercises_left">12 exercises left</string>
     <string name="progress_image">Progress Image</string>
     <string name="recent_activity">Recent Activity</string>
@@ -149,8 +151,8 @@
     <string name="squats">Squats</string>
     <string name="lunges">Lunges</string>
     <string name="plan_today">Today\'s Plan</string>
-    <string name="push_up">Push Up</string>
-    <string name="sub_header">100 Push up a day</string>
+    <string name="push_up">Incline Push-Up</string>
+    <string name="sub_header">100 Incline Push-Up a day</string>
     <string name="sit_up">Sit Up</string>
     <string name="sit_up_a_day">20 Sit up a day</string>
     <string name="skip">Skip all</string>
@@ -160,22 +162,22 @@
     <string name="confidence_percentage">%d %%</string>
 
     <!-- Strings for PlanStepOne & PlanStepTwo fragment -->
-    <string name="choose_exercise">Choose Exercises</string>
+    <string name="choose_exercise">Start Your Routine</string>
     <string name="level_easy">Beginner</string>
     <string name="level_intermediate">Intermediate</string>
     <string name="level_advance">Advance</string>
     <string name="content_description_media">Image of exercise type</string>
-    <string name="title_example">Push up</string>
+    <string name="title_example">Incline Push-Up</string>
     <string name="text_example">450 kCal</string>
     <string name="supporting_text">Advance</string>
     <string name="action">Choose</string>
 
-    <string name="new_plan">New Fitness Plan</string>
-    <string name="label_exercise_name">Exercise</string>
-    <string name="label_time">Time</string>
+    <string name="new_plan">New Rehab Plan</string>
+    <string name="label_exercise_name">Rehab Exercise</string>
+    <string name="label_time">Rehab Time</string>
     <string name="label_rep">Repeat Number (1 - 100)</string>
-    <string name="label_days">Select days</string>
-    <string name="create_button">Create plan</string>
+    <string name="label_days">Select rehab days</string>
+    <string name="create_button">Create rehab plan</string>
     <string-array name="days">
         <item>Monday</item>
         <item>Tuesday</item>
@@ -192,18 +194,18 @@
     <string name="result">Weekly result</string>
     <string name="summary">Weekly summary</string>
     <string name="total_time">%d minutes</string>
-    <string name="total_exercise">%d exercises</string>
     <string name="example_percentage">110 %</string>
-    <string name="exercise_type">Exercise Type</string>
-    <string name="no_activities_yet">No activities yet</string>
-    <string name="total_calories"> %s Kcal this week</string>
+    <string name="total_exercise">%d rehab exercises</string>
+    <string name="exercise_type">Rehab Exercise Type</string>
+    <string name="no_activities_yet">No rehab activities yet</string>
+    <string name="total_calories"> %s Kcal burned in rehab this week</string>
     <string name="loading">Loading Pose AI model in camera preview..</string>
     <string name="overlay">Semi-transparent overlay for visual effect</string>
     <string name="equipment_description">Image of workout equipment</string>
     <string name="logo">logo for the app</string>
-    <string name="ai_fitness_assistant">AI Fitness Assistant</string>
+    <string name="ai_fitness_assistant">AI Rehab Assistant</string>
     <string name="reps">Reps</string>
-    <string name="completedAll">Congratulation!\nYou have completed all the planned exercise for today.</string>
+    <string name="completedAll">Congratulation!\nYou have completed all the planned rehab exercise for today.</string>
 
 </resources>
 

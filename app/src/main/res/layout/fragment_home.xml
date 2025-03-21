@@ -34,7 +34,7 @@
         android:id="@+id/progress_layout"
         android:layout_width="match_parent"
         android:layout_height="99dp"
-        android:layout_margin="@dimen/margin_medium"
+
         android:background="@drawable/rounded_rectangle"
         android:backgroundTint="@color/primaryColor"
         android:orientation="vertical">
@@ -98,6 +98,36 @@
             app:layout_constraintTop_toTopOf="@+id/progress_bar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_rehab_exercise"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Rehab Exercises"
+            android:background="@drawable/button_selected"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_gym_exercise"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Gym Exercises"
+            android:background="@drawable/button_selected"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
     <!-- Recent Activity TextView -->
     <TextView
         android:layout_width="wrap_content"
@@ -125,6 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_medium"
             android:text="@string/no_activities_yet"
             android:textColor="@color/primaryColor"
             android:textSize="18sp"

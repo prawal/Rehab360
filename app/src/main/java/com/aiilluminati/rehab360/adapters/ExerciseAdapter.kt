@@ -46,6 +46,7 @@ class ExerciseAdapter internal constructor(
 
         val cardView: MaterialCardView = itemView.findViewById(R.id.card)
         val name: TextView = itemView.findViewById(R.id.exercise_name)
+        val description: TextView = itemView.findViewById(R.id.exercise_description)
         val image: ImageView = itemView.findViewById(R.id.exercise_image)
         val level: Chip = itemView.findViewById(R.id.chip)
         val calorieBurned: TextView = itemView.findViewById(R.id.exercise_calories)
@@ -72,6 +73,7 @@ class ExerciseAdapter internal constructor(
         holder.name.text = currentExercise.name
         currentExercise.image?.let { holder.image.setImageResource(it) }
         holder.level.text = currentExercise.level
+        holder.description.text = currentExercise.description
         holder.calorieBurned.text = "${currentExercise.calorie} kCal"
         holder.level.isCheckable = false
 

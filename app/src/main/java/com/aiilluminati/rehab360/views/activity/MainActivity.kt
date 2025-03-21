@@ -49,14 +49,14 @@ class MainActivity : AppCompatActivity() {
                 R.id.homeFragment // Jetpack Navigation
             ),
             CbnMenuItem(
-                R.drawable.workout,
-                R.drawable.avd_workout,
-                R.id.workoutFragment
-            ),
-            CbnMenuItem(
                 R.drawable.plan,
                 R.drawable.avd_plan,
                 R.id.planStepOneFragment
+            ),
+            CbnMenuItem(
+                R.drawable.workout,
+                R.drawable.avd_workout,
+                R.id.workoutFragment
             )/*,
             CbnMenuItem(
                 R.drawable.profile,

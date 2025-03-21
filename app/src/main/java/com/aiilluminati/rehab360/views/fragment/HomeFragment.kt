@@ -7,17 +7,21 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.aiilluminati.rehab360.R
 import com.aiilluminati.rehab360.adapters.PlanAdapter
 import com.aiilluminati.rehab360.adapters.RecentActivityAdapter
+import com.aiilluminati.rehab360.data.NavigationData
 import com.aiilluminati.rehab360.data.database.AppRepository
 import com.aiilluminati.rehab360.data.plan.Plan
 import com.aiilluminati.rehab360.data.results.RecentActivityItem
@@ -78,6 +82,37 @@ class HomeFragment : Fragment(), PlanAdapter.ItemListener, MemoryManagement {
         progressBar = view.findViewById(R.id.progress_bar)
         progressPercentage = view.findViewById(R.id.progress_text)
         appRepository = AppRepository(requireActivity().application)
+        // Find buttons
+        val btnRehab = view.findViewById<Button>(R.id.btn_rehab_exercise)
+        val btnGym = view.findViewById<Button>(R.id.btn_gym_exercise)
+
+        // Default selection - Set Rehab as selected initially
+        btnRehab.isSelected = true
+        btnRehab.setBackgroundResource(R.drawable.button_selected)
+        btnGym.setBackgroundResource(R.drawable.button_unselected)
+
+
+        btnRehab.setOnClickListener {
+            btnRehab.isSelected = true
+            btnGym.isSelected = false
+            updateButtonStyles(btnRehab, btnGym)
+
+            // Use Bundle to pass the argument
+            NavigationData.isRehab = true
+            findNavController().navigate(R.id.action_homeFragment_to_planStepOneFragment)
+        }
+
+        btnGym.setOnClickListener {
+            btnRehab.isSelected = false
+            btnGym.isSelected = true
+            updateButtonStyles(btnGym, btnRehab)
+
+            // Use Bundle to pass the argument
+            NavigationData.isRehab = false
+            findNavController().navigate(R.id.action_homeFragment_to_planStepOneFragment)
+        }
+
+
         // Initialize ViewModel
         resultViewModel = ResultViewModel(MyApplication.getInstance())
         addPlanViewModel = AddPlanViewModel(MyApplication.getInstance())
@@ -103,7 +138,7 @@ class HomeFragment : Fragment(), PlanAdapter.ItemListener, MemoryManagement {
                 // Show a message or handle the empty case as per your UI requirements
                 val noActivityMessage = view.findViewById<TextView>(R.id.no_activity_message)
                 noActivityMessage.text = getString(R.string.no_activities_yet)
-                noActivityMessage.isVisible = true
+                noActivityMessage.isVisible = false
             } else {
                 recentActivityRecyclerView.isVisible = true
             }
@@ -258,6 +293,13 @@ class HomeFragment : Fragment(), PlanAdapter.ItemListener, MemoryManagement {
         workoutResults = null
     }
 
+    private fun updateButtonStyles(selectedButton: Button, unselectedButton: Button) {
+        selectedButton.setBackgroundResource(R.drawable.button_selected)
+        selectedButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
+
+        unselectedButton.setBackgroundResource(R.drawable.button_unselected)
+        unselectedButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
+    }
     override fun onDestroy() {
         clearMemory()
         super.onDestroy()
